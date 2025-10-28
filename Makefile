@@ -10,7 +10,7 @@ build: ## Build the Docker image
 	docker compose build
 
 up: ## Start the application
-	docker-compose up -d
+	docker compose up -d
 	@echo "Portfolio is running at http://localhost"
 
 down: ## Stop the application
