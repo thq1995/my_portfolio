@@ -24,6 +24,9 @@ RUN npm run build
 # Stage 3: Runner (for static export)
 FROM nginx:alpine AS runner
 
+# Install curl for health checks
+RUN apk add --no-cache curl
+
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/nginx.conf
 
