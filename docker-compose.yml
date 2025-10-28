@@ -8,6 +8,9 @@ services:
     container_name: my_portfolio
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - ./ssl:/etc/nginx/ssl:ro
     restart: unless-stopped
     environment:
       - NODE_ENV=production
